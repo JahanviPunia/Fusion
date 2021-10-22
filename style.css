@@ -1,8 +1,3 @@
-@media only screen and (min-width: 0px) and (max-width: 767px)
-{ 
-    .container{width:100%;overflow:hidden;}
-    //add all the classes and ids which you want to make responsive here
-}
 body{
     font-family: 'Libre Baskerville', serif;
     padding-bottom: 20px;
