@@ -1,3 +1,8 @@
+@media only screen and (min-width: 0px) and (max-width: 767px)
+{ 
+    .container{width:100%;overflow:hidden;}
+    //add all the classes and ids which you want to make responsive here
+}
 body{
     font-family: 'Libre Baskerville', serif;
     padding-bottom: 20px;
@@ -66,7 +71,8 @@ body{
 .carousel{
     height: 500px;
     width: 500px;
-    margin: 100px ;
+    margin: 100px;
+    margin-top: 150px;
 }
 .wrapper{
     margin: 100px ;
@@ -129,4 +135,45 @@ body{
     opacity: 0.8;
     margin-top: 50px;
     margin-left: 30%;
+}
+.order-form .container {
+      color: #4c4c4c;
+      padding: 40px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    }
+
+.order-form-label {
+      margin: 8px 0 0 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+.order-form-input {
+      width: 100%;
+      padding: 8px 8px;
+      border-width: 1px !important;
+      border-style: solid !important;
+      border-radius: 3px !important;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      line-height: 1.2em;
+      background-color: transparent;
+      border-color: #cccccc;
+      margin: 4px;
+    }
+
+.btn-submit:hover {
+      background-color: #090909 !important;
+    }
+.form-table{
+    padding: 10px;
+    margin: 10px;
+}
+.form-th{
+    padding-left: 100px;
+}
+.order_recpt{
+    margin-left: 650px;
 }
