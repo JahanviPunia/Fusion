@@ -200,7 +200,42 @@
 </div>
 <!--menu ends here-->
 
+
 <hr class="divider">
+<!-- order here -->
+<div class="text-bg">
+  <div class="col-8">
+    <label class="order-form-label">Order here !!</label>
+  </div>
+  <table class="form-table">
+      <th class="form-th">
+        <label for="selectItem">Enter Item</label>
+        <input type="text" 
+               id="userinput" 
+               class="form-control" 
+               placeholder="What you need " 
+               onkeydown="return searchKeyPress(event);"
+               name="itemOrder">
+      </th>
+      <th class="form-th">
+         <label for="quantity">Quantity</label>
+          <input type="number" 
+                 id="userNo"
+                 class="form-control" 
+                 placeholder="How many" 
+                 onkeydown="return searchKeyPress(event);"
+                 name="itemQuan">
+      </th>
+      <th class="form-th">
+          <button class="btn-success" id="add">Add Item</button>
+          <button class="btn-danger" id="removeAll">REMOVE ALL</button>
+      </th>
+  </table>
+  <ul class="text-center" id="list"></ul>
+</div>
+
+<hr class="divider">
+<br>
 
 <!--Form starts here-->
  <div class="col-12">
@@ -214,100 +249,65 @@
           <hr class="mt-1">
         </div>
         <div class="col-12">
-
+        <!-- <form action="connect.php" method="post"> -->
           <div class="row mx-4">
             <div class="col-12 mb-2">
               <label class="order-form-label">Name</label>
             </div>
             <div class="col-12 col-sm-6">
-              <input class="order-form-input" placeholder="First">
+              <input class="order-form-input" placeholder="First" name="firstname">
             </div>
             <div class="col-12 col-sm-6 mt-2 mt-sm-0">
-              <input class="order-form-input" placeholder="Last">
+              <input class="order-form-input" placeholder="Last" name="lastname">
             </div>
           </div>
 
           <div class="row mt-3 mx-4">
             <div class="col-12">
-              <label class="order-form-label">Order here !!</label>
-            </div>
-            <table class="form-table">
-                <th class="form-th">
-                   <div class="input-group mb-3">
-                      <label class="input-group-text" for="inputGroupSelect01">Select Food Item  </label>
-                      
-                      <select class="custom-select" id="inputGroupSelect01">
-                         <option selected>Select</option>
-                         <option value="Hakka Noodles">Hakka Noodles</option>
-                         <option value="The Crispy Crust Pizzeria">The Crispy Crust Pizzeria</option>
-                         <option value="Bread Basket">Bread Basket</option>
-                         <option value="Honey Almond Granola with Fruits">Honey Almond Granola with Fruits</option>
-                         <option value="Belgian Waffle">Belgian Waffle</option>
-                         <option value="Scrambled eggs">Scrambled eggs</option>
-                         <option value="Blueberry Pancakes">Blueberry Pancakes</option>
-                    </select>
-                </div>  
-                </th>
-                <th class="form-th">
-                   <label for="quantity">Quantity</label>
-                    <input type="number">
-                </th>
-                <th class="form-th">
-                    <button class="btn-danger">Add</button>
-                </th>
-            </table>
-            
-          </div>
-
-
-          <div class="row mt-3 mx-4">
-            <div class="col-12">
-              <label class="order-form-label">Final Amount</label>
+              <label class="order-form-label">Address</label>
             </div>
             <div class="col-12">
-              <input class="order-form-input datepicker" type="text">
-            </div>
-          </div>
-
-          <div class="row mt-3 mx-4">
-            <div class="col-12">
-              <label class="order-form-label">Adress</label>
-            </div>
-            <div class="col-12">
-              <input class="order-form-input" placeholder="Street Address">
-            </div>
-            <div class="col-12 mt-2">
-              <input class="order-form-input" placeholder="Street Address Line 2">
+              <input class="order-form-input" placeholder="Street Address" name="streetAddress">
             </div>
             <div class="col-12 col-sm-6 mt-2 pr-sm-2">
-              <input class="order-form-input" placeholder="City">
+              <input class="order-form-input" placeholder="City" name="city">
             </div>
             <div class="col-12 col-sm-6 mt-2 pl-sm-0">
-              <input class="order-form-input" placeholder="Region">
+              <input class="order-form-input" placeholder="Region" name="region">
             </div>
             <div class="col-12 col-sm-6 mt-2 pr-sm-2">
-              <input class="order-form-input" placeholder="Postal / Zip Code">
+              <input class="order-form-input" placeholder="Postal / Zip Code" name="pin">
             </div>
             <div class="col-12 col-sm-6 mt-2 pl-sm-0">
-              <input class="order-form-input" placeholder="Country">
+              <input class="order-form-input" placeholder="Country" name="country">
             </div>
           </div>
 
-          <div class="row mt-3 mx-4">
-            <div class="col-12">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="validation" id="validation" value="1">
-                <label for="validation" class="form-check-label">All the above information is correct </label>
-              </div>
-            </div>
-          </div>
+          <br>
 
-          <div class="row mt-3">
-            <div class="col-12">
-              <button type="button" id="btnSubmit" class="btn btn-dark d-block mx-auto btn-submit">Submit</button>
-            </div>
-          </div>
+          <div class="col-md-6">
+            <form role="form">
+              <div class="form-group">
+                  <h4>Say Updated with Us!</h4>
+               <label for="exampleInputEmail1">
+               Email address
+               </label>
+               <input type="email" class="form-control" id="exampleInputEmail1"/>
+               </div>
+               <div class="form-group">
+               <label for="exampleInputPassword1"> Contact No </label>
+               <input type="password" class="form-control" id="exampleInputPassword1"/>
+               </div>
+               <div class="checkbox"><label>
+               <input type="checkbox" /> All the above information is correct</label>
+               </div>
+               <button type="submit" class="btn btn-primary">Submit
+               </button>
+             </form>
+         </div>
 
+         <br>
+        <!-- </form> -->
         </div>
       </div>
     </div>
@@ -316,7 +316,7 @@
 <!--form ends here-->
 <hr class="divider">
 
-<button type="button" class="btn btn-primary btn-lg order_recpt" onclick="order_recpt">Order Reciept</button>
+<!-- <button type="button" class="btn btn-primary btn-lg order_recpt" id=order_recpt>Order Reciept</button> -->
 
 <hr class="divider">
 <!--content section starts-->
@@ -327,13 +327,13 @@
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dicta earum doloribus officiis, ipsam maxime voluptatem, corrupti tempora nemo ab delectus illo sapiente ad dignissimos officia debitis ipsum ipsa. Magnam corporis minus tempore, ut ipsum et saepe reprehenderit veritatis molestias.</p>
     </div>
     <div class="col-lg-5">
-        <img src="coffee.jpg" alt="images" class="img-circle animate__heartBeat" width="350px" height="350px">
+        <img src="images/coffee.jpg" alt="images" class="img-circle animate__heartBeat" width="350px" height="350px">
     </div>
 </div>
 <div class="row content">
     <!-- image 2 -->
    <div class="col-lg-5">
-        <img src="history.jpg" alt="history" class="img-circle animate__heartBeat" width="350px" height="350px">
+        <img src="images/history.jpg" alt="history" class="img-circle animate__heartBeat" width="350px" height="350px">
     </div>
     <div class="col-lg-7 para_dec">
         <h2 class="content-heading">Our History!! <span class="text-muted">Goes here!</span></h2>
@@ -343,35 +343,10 @@
 
 <hr class="divider">
 
-<!--form starts here-->
-<div class="col-md-6 text-bg">
-     <form role="form">
-       <div class="form-group">
-           <h4>Say Updated with Us!</h4>
-				<label for="exampleInputEmail1">
-				Email address
-				</label>
-				<input type="email" class="form-control" id="exampleInputEmail1"/>
-				</div>
-				<div class="form-group">
-				<label for="exampleInputPassword1"> Contact No
-				</label>
-				<input type="password" class="form-control" id="exampleInputPassword1"/>
-				</div>
-				<div class="checkbox">
-				<label>
-				<input type="checkbox" /> Check me out
-				</label>
-				</div>
-				<button type="submit" class="btn btn-primary">Submit
-				</button>
-            </form>
-         </div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-	<script>
-	</script>
+	<script src="js/todo.js"> </script>
 	
 <hr class="divider">
 
