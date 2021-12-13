@@ -125,16 +125,23 @@ body{
     background-color:dimgrey;
     color: white;
     background-size: 0,15px;
-    margin: auto;
+    margin: center;
     border-radius: 30px;
     opacity: 0.8;
     margin-top: 50px;
-    margin-left: 30%;
+    padding-left: 100px;
+    padding-bottom: 30px;
+}
+.orderForm{
+    padding-left: 125px;;
+
 }
 .order-form .container {
-      color: #4c4c4c;
+      background-color:beige;
       padding: 40px;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+      margin: 0 auto;
+      font-family: 'EB Garamond', serif;
     }
 
 .order-form-label {
@@ -171,4 +178,18 @@ body{
 }
 .order_recpt{
     margin-left: 650px;
+}
+
+#userinput{
+    width: 350px;
+    height: 35px;
+    /* display: inline-block; */
+}
+
+.form-control{
+    margin: 0 auto;
+}
+
+ul{
+    list-style-type: none;
 }
